@@ -1,16 +1,77 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:ui="http://java.sun.com/jsf/facelets">
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
 
 <h:head>
+	<ui:insert name="pageHeader" />
+	<style>
+	*{
+	border: 0;
+	margin: 0;
+	}
+.top {
+	background-color: blue;
+	height: 80px;
+	display: block;
+}
 
+.menu {
+	background-color: red;
+	width: 20%;
+	height: 440px;
+	float: left;
+}
+.content {
+	background-color: gray;
+	width: 60%;
+	height: 440px;
+	float: left;
+	
+}
+.menu_right{
+	background-color: yellow;
+	width: 20%;
+	height: 440px;
+	float: right;
+
+}
+.bottom{
+	background-color: green;
+	height: 80px;
+	display: block;
+	
+}
+.clear{
+	clear: both;
+}
+</style>
 </h:head>
 
+
+
 <h:body>
-			<ui:insert name="pageHeader">pageTitle</ui:insert>
-					<ui:insert name="body">Page Body</ui:insert>
+	<div style="width: 800px; height: 600px; margin: 0 auto">
+		<div id="cima" class="top">
+			<ui:insert name="cima">cima</ui:insert>
+		</div>
+		<div id="meio">
+			<div id="esquerda" class="menu">
+				<ui:insert name="esquerda">esquerda</ui:insert>
+			</div>
+			<div id="meio_meio" class="content">
+				<ui:insert name="meio">meio</ui:insert>
+			</div>
+			<div id="direita" class="menu_right">
+				<ui:insert name="direita">direita</ui:insert>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div id="baixo" class="bottom">
+			<ui:insert name="baixo">baixo</ui:insert>
+		</div>
+	</div>
 </h:body>
-		
+
 </html>
