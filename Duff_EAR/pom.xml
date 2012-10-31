@@ -5,7 +5,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <modules>
-  	<module>../../duff3/Duff_EJB</module>
-  	<module>../../duff3/Duff_WEB</module>
+  	<module>../Duff_EJB</module>
+  	<module>../Duff_WEB</module>
   </modules>
 </project>
