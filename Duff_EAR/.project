@@ -3,8 +3,8 @@
 	<name>Duff_EAR</name>
 	<comment></comment>
 	<projects>
-		<project>Duff_EJB</project>
 		<project>Duff_WEB</project>
+		<project>Duff_EJB</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
