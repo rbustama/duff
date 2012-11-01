@@ -3,17 +3,18 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
-	<!-- <parent> -->
-	<!-- <groupId>Duff_EAR</groupId> -->
-	<!-- <artifactId>Duff_EAR</artifactId> -->
-	<!-- <version>0.0.1</version> -->
-	<!-- <relativePath>../Duff_EAR/pom.xml</relativePath> -->
-	<!-- </parent> -->
+	<parent>
+		<groupId>Duff_EAR</groupId>
+		<artifactId>Duff_EAR</artifactId>
+		<version>0.0.1</version>
+		<relativePath>../Duff_EAR/pom.xml</relativePath>
+	</parent>
 
-	<!-- <artifactId>Duff_WEB</artifactId> -->
-	<!-- <packaging>war</packaging> -->
+	<groupId>Duff_WEB</groupId>
+	<artifactId>Duff_WEB</artifactId>
+	<packaging>war</packaging>
+	<name>Duff_WEB</name>
 
-	<!-- <name>Duff_WEB</name> -->
 
 	<repositories>
 		<repository>
@@ -31,6 +32,26 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
+
+
+	<build>
+		<finalName>private</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.1.1</version>
+				<configuration>
+					<webResources>
+						<resource>
+							<!-- this is relative to the pom.xml directory -->
+							<directory>WebContent</directory>
+						</resource>
+					</webResources>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
 
 
