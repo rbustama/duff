@@ -3,34 +3,34 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
-	<!-- <parent> -->
-	<!-- <groupId>Duff_EAR</groupId> -->
-	<!-- <artifactId>Duff_EAR</artifactId> -->
-	<!-- <version>0.0.1</version> -->
-	<!-- <relativePath>../Duff_EAR/pom.xml</relativePath> -->
-	<!-- </parent> -->
+	<parent>
+		<groupId>Duff_EAR</groupId>
+		<artifactId>Duff_EAR</artifactId>
+		<version>0.0.1</version>
+		<relativePath>../Duff_EAR/pom.xml</relativePath>
+	</parent>
+	<artifactId>Duff_WEB</artifactId>
+	<packaging>war</packaging>
+	<name>Duff_WEB</name>
 
-	<!-- <artifactId>Duff_WEB</artifactId> -->
-	<!-- <packaging>war</packaging> -->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.1.1</version>
+				<configuration>
+					<webResources>
+						<resource>
+							<!-- this is relative to the pom.xml directory -->
+							<directory>WebContent</directory>
+						</resource>
+					</webResources>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
-	<!-- <name>Duff_WEB</name> -->
-
-	<repositories>
-		<repository>
-			<id>prime-repo</id>
-			<name>PrimeFaces Maven Repository</name>
-			<url>http://repository.primefaces.org</url>
-			<layout>default</layout>
-		</repository>
-	</repositories>
-	<dependencies>
-		<dependency>
-			<groupId>org.primefaces</groupId>
-			<artifactId>primefaces</artifactId>
-			<version>3.4.1</version>
-			<scope>provided</scope>
-		</dependency>
-	</dependencies>
 </project>
 
 
